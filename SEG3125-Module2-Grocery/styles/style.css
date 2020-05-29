@@ -1,5 +1,14 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
 
+
+/*Header class*/
+.header{
+  font-family: Calibri;
+  color: cornflowerblue;
+  border:1px solid grey;
+  background: cornsilk;
+}
+
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -34,4 +43,16 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+.footer{
+  color: darkorange;
+  right: 10px;
+  justify-content: flex-end;
+  font-family: Calibri;
+  bottom:1px;
+  width:100%;
+  position: absolute;
+  display: flex;
+
 }

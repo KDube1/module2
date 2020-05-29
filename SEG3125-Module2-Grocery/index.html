@@ -7,11 +7,15 @@
 
 <body>
 
+<div class ="header">
+    <h1>KrishnaMart</h1>
+</div>
+
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+  <button class="tablinks" id ="clientTab">Client</button>
+  <button class="tablinks" id = "productTab">Products</button>
+  <button class="tablinks" id="cartTab">Cart</button>
 </div>
 
 <!-- Tab content -->
@@ -19,12 +23,14 @@
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-	<option value=""></option>
-	<option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
-    <option value="None">None</option>
-	</select>
+	<div id="dietSelect" name="dietSelect">
+        <input type="checkbox" id="vegetarian">
+        <label for="Vegetarian"> Vegetarian</label><br>
+        <input type="checkbox" id="glutenFree">
+        <label for="GlutenFree"> Gluten Free</label><br>
+        <input type="checkbox" id="organic">
+        <label for="Organic"> Organic</label><br>
+	</div>
 </div>
 
 <div id="Products" class="tabcontent">
@@ -32,7 +38,7 @@
   <p>We preselected products based on your restrictions.</p>
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+	 <button id="addCart" type="button">
 		Add selected items to cart.
 	</button>
 </div>
@@ -43,8 +49,12 @@
   <div id="displayCart"></div>
 </div>
 
-<script src="scripts/groceries.js"></script>
-<script src="scripts/main.js"></script>
+<script type="module" src="scripts/groceries.js"></script>
+<script type="module" src="scripts/main.js"></script>
 
 </body>
+
+<div class ="footer">
+    <p>Made By Krishna Dube</p>
+</div>
 </html>
